@@ -1,0 +1,156 @@
+:root {
+    --brano-principal: #ffffff;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+    --fonte-principal: 'Inter';
+}
+
+body {
+    background-color: var(--cor-de-fundo);   /*bory e o corpo pai entao todos que estao dentdo dele recebem esses argumentos*/
+    color: var(--brano-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+* {                    /*pega todos os elementos htm e tira magem e espaços*/
+    margin: 0;
+    padding: 0;
+}
+
+.principal{
+    background-image: url("img/Background.png");
+    background-repeat: no-repeat;      /*para não repetir a imagem*/
+    background-size: contain;          /*para a imagem ocupar todo o conteiner*/
+    align-items:center;   /*alinha todos os itens no centro da pagina*/
+    text-align: center;  /*alinha todo o texto da section(elemento do bloco) principal que é o bodi no centro incluido botoes e tudo*/
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;  /* ocupa o espaço de colunas*/
+}
+
+.container__botao {
+    background-color: var(--botao-azul);  /* cor de fundo do botão*/
+    border-radius: 5px;   /* para arredondar as bordas do botao*/
+    padding: 1em; /*para aumentar o tamanho do botao relativo a fonte*/
+    font-size: 16px;
+    color: var(--brano-principals);
+    display: block;
+    text-decoration: none;
+    margin-bottom: 1em;   /*define onde será a margem ou melhor o espaço e pode ser top/left/hight/bottom e etc. bottom é inferior*/
+}
+
+.container__botao:hover {    /*hover é quando passa o mause*/
+    background-color: var(--cinza-secundario);
+    color: var(--cor-de-fundo);    
+}
+.container__botao:active {   /*active é quando vc fica clicado*/
+    background-color:goldenrod;
+    color: var(--cor-de-fundo); 
+    border: 2px solid var(--cinza-secundario); 
+}
+
+.botao_secundario {
+    background-color:transparent;
+    border: 1px solid var(--brano-principal);  /* insere borda no botao, o solid pode mudar para tracejado entre outros*/
+}
+
+.container__aviso {
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}
+
+.container__titulo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container__imagem {
+    margin: 1em 0 2em 0;
+
+}
+
+.container__caixa {
+    margin: 0 6em;
+}
+
+.secundario__imagem {
+    width: 80%;    
+}
+.secundario {
+    align-items: center;
+    margin: 0 10em;
+}
+.descricao__titulo {
+    font-weight: 700;
+    font-size: 45px;
+    color: var(--brano-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto {
+    color: var(--cinza-secundario);
+}
+
+.secundario__botao {
+   display: inline-block;
+   margin-top: 1em;
+}
+
+.container__descricao {
+    padding: 2em;
+}
+
+.dispositivos__listas {  /*tudo estava em lista quando uso o display:flex ele coloca tudo um do lado do outro ou seja fez um flex container*/
+    display: flex;        /*e a direção padrão desse display flex em linha que seria o flex direction ou seja o padrão do flex-direction é row . */
+    justify-content: center;
+    list-style-type: none;  /*retira os pontinhos da lista os marcadores*/
+    margin: 3em 0;
+}
+.dispositivos {
+    text-align: center;    
+
+}
+.dispositivos__titulos {
+    font-size: 48px;
+    color: var(--brano-principal);
+ }
+.lista__item {
+    font-size: 32px;
+    color: var(--brano-principal);
+}
+
+.rodape__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 1em;
+}
+
+.lista__link a{
+    text-decoration: none;
+    color: var(--branco-principal);
+    margin-left: 1em;
+}
+
+.rodape__texto {
+    margin: 1em 0;
+    color: var(--cinza-secundario);
+    font-size: 14px;
+}
+
+.rodape {
+    text-align: center;
+    margin: 5em 3em;
+}
+
+.lista__link a:hover {     /*hover serve para mudar a cor do botão ao passar o mouse por cima*/
+    color: var(--botao-azul)
+}
+.lista__link a:active {
+    color: crimson;
+}
